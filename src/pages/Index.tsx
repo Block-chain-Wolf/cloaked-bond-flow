@@ -12,7 +12,7 @@ import { useAccount } from 'wagmi';
 import { 
   Plus, 
   DollarSign, 
-  Certificate,
+  FileText,
   Building,
   Users,
   Shield,
@@ -446,7 +446,7 @@ const Index = () => {
             </div>
             <Card className="bg-white/80 backdrop-blur-sm border-gray-200 shadow-lg p-6">
               <div className="text-center py-12">
-                <Certificate className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <FileText className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">No Certificates Yet</h3>
                 <p className="text-gray-600 mb-4">Certificates will appear here after successful investments</p>
                 {!isConnected && (

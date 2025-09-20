@@ -1,27 +1,27 @@
-# 🏦 Cloaked Bond Flow
+# Cloaked Bond Flow - Project Summary
 
-> **Advanced Institutional Bond Trading Platform with FHE Encryption**
+## Overview
 
-A cutting-edge decentralized finance (DeFi) platform that revolutionizes institutional bond trading through fully homomorphic encryption (FHE) technology, ensuring complete privacy and confidentiality in bond allocations.
+Cloaked Bond Flow is a sophisticated institutional bond trading platform built with FHE (Fully Homomorphic Encryption) technology for confidential bond allocations and secure tokenized investments.
 
-## 🌟 Key Features
+## Key Features
 
-### 🔐 **Privacy-First Architecture**
+### 🔐 Privacy-First Architecture
 - **FHE-Encrypted Operations**: All sensitive financial data processed using fully homomorphic encryption
 - **Zero-Knowledge Proofs**: Privacy-preserving verification without revealing underlying data
 - **Confidential Allocations**: Investor strategies remain hidden until bond issuance completion
 
-### 💼 **Institutional-Grade Security**
+### 💼 Institutional-Grade Security
 - **Multi-Signature Wallets**: Enterprise-level security for institutional participants
 - **Reputation System**: Advanced scoring mechanism for investors and issuers
 - **Compliance Tools**: Built-in regulatory compliance features
 
-### 🚀 **Advanced Bond Management**
+### 🚀 Advanced Bond Management
 - **Dynamic Tranche Creation**: Real-time bond tranche management with encrypted parameters
 - **Smart Certificate System**: Automated certificate issuance and redemption
 - **Risk Assessment**: AI-powered risk evaluation and portfolio optimization
 
-## 🛠 Technology Stack
+## Technology Stack
 
 | Category | Technology | Purpose |
 |----------|------------|---------|
@@ -32,29 +32,78 @@ A cutting-edge decentralized finance (DeFi) platform that revolutionizes institu
 | **Wallets** | RainbowKit + Wagmi | Multi-wallet integration |
 | **State** | TanStack Query | Efficient data management |
 
-## 🚀 Quick Start
+## Smart Contract Features
 
-### Prerequisites
-- **Node.js** 18+ 
-- **npm** or **yarn**
-- **Git** for version control
+### Core Functionality
+- **Bond Tranche Management**: Create and manage encrypted bond tranches
+- **Investment Allocation**: Secure, encrypted investment processing
+- **Certificate Issuance**: Automated certificate generation and tracking
+- **Reputation System**: Decentralized reputation scoring
 
-### Installation
+### Security Features
+- **Access Control**: Role-based permissions for different user types
+- **Emergency Functions**: Pause and unpause mechanisms for security
+- **Data Validation**: Comprehensive input validation and sanitization
 
-```bash
-# Clone the repository
-git clone https://github.com/Block-chain-Wolf/cloaked-bond-flow.git
-cd cloaked-bond-flow
+## Project Structure
 
-# Install dependencies
-npm install
-
-# Configure environment variables
-cp env.example .env
-
-# Start development server
-npm run dev
 ```
+cloaked-bond-flow/
+├── contracts/CloakedBondFlow.sol    # FHE智能合约
+├── src/
+│   ├── components/                  # React组件
+│   ├── hooks/useCloakedBondFlow.ts # 合约交互hooks
+│   ├── lib/
+│   │   ├── contracts.ts            # 合约ABI
+│   │   ├── fhe.ts                  # FHE工具函数
+│   │   └── wagmi.ts                # 钱包配置
+│   └── pages/                      # 页面组件
+├── VERCEL_DEPLOYMENT.md            # 部署指南
+├── PROJECT_SUMMARY.md              # 项目总结
+└── README.md                       # 项目文档
+```
+
+## Security Considerations
+
+### FHE Implementation
+- All sensitive financial data encrypted using FHE
+- Privacy-preserving computations
+- Zero-knowledge proof integration for verification
+
+### Smart Contract Security
+- Comprehensive access control mechanisms
+- Emergency pause functionality
+- Reputation-based permission system
+
+### Wallet Security
+- Multi-signature support for institutional wallets
+- Secure transaction handling
+- Error boundary protection
+
+## Deployment
+
+### Vercel Deployment
+1. Connect your GitHub repository to Vercel
+2. Configure build settings for Vite
+3. Set environment variables in Vercel dashboard
+4. Deploy to production
+
+### Smart Contract Deployment
+1. Deploy contracts to Sepolia testnet
+2. Verify contract functionality
+3. Update contract addresses in frontend
+4. Test all interactions
+
+## Development
+
+### Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
 
 ### Environment Setup
 
@@ -73,80 +122,7 @@ VITE_FHE_NETWORK_URL=https://api.zama.ai/fhevm
 VITE_FHE_APP_ID=YOUR_FHE_APP_ID
 ```
 
-## 📋 Available Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run lint` | Run ESLint |
-
-## 🏗 Project Architecture
-
-```
-src/
-├── components/          # React components
-│   ├── ui/             # Reusable UI components
-│   ├── BondHeader.tsx  # Main navigation
-│   ├── WalletConnection.tsx # Wallet integration
-│   └── EncryptedTrancheDisplay.tsx # Bond management
-├── hooks/              # Custom React hooks
-│   └── useCloakedBondFlow.ts # Contract interactions
-├── lib/                # Utility functions
-│   ├── contracts.ts    # Smart contract ABI
-│   ├── fhe.ts         # FHE utilities
-│   └── wagmi.ts       # Wallet configuration
-├── pages/              # Application routes
-└── contracts/          # Smart contract interfaces
-    └── CloakedBondFlow.sol
-```
-
-## 🔧 Smart Contract Features
-
-### Core Functionality
-- **Bond Tranche Management**: Create and manage encrypted bond tranches
-- **Investment Allocation**: Secure, encrypted investment processing
-- **Certificate Issuance**: Automated certificate generation and tracking
-- **Reputation System**: Decentralized reputation scoring
-
-### Security Features
-- **Access Control**: Role-based permissions for different user types
-- **Emergency Functions**: Pause and unpause mechanisms for security
-- **Data Validation**: Comprehensive input validation and sanitization
-
-## 🔒 Security Considerations
-
-### FHE Implementation
-- All sensitive financial data encrypted using FHE
-- Privacy-preserving computations
-- Zero-knowledge proof integration for verification
-
-### Smart Contract Security
-- Comprehensive access control mechanisms
-- Emergency pause functionality
-- Reputation-based permission system
-
-### Wallet Security
-- Multi-signature support for institutional wallets
-- Secure transaction handling
-- Error boundary protection
-
-## 🚀 Deployment
-
-### Vercel Deployment
-1. Connect your GitHub repository to Vercel
-2. Configure build settings for Vite
-3. Set environment variables in Vercel dashboard
-4. Deploy to production
-
-### Smart Contract Deployment
-1. Deploy contracts to Sepolia testnet
-2. Verify contract functionality
-3. Update contract addresses in frontend
-4. Test all interactions
-
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions from the community! Please follow these steps:
 
@@ -162,11 +138,11 @@ We welcome contributions from the community! Please follow these steps:
 - Update documentation for new features
 - Follow the existing code style
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-## 🆘 Support
+## Support
 
 ### Getting Help
 - 📖 **Documentation**: Check our comprehensive docs
@@ -180,7 +156,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **FHE Operations**: Ensure FHE network connectivity
 - **Contract Interactions**: Check network and gas settings
 
-## 🗺 Roadmap
+## Roadmap
 
 ### Phase 1 (Current)
 - ✅ Core FHE encryption implementation
@@ -200,7 +176,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - 📋 Automated risk assessment
 - 📋 Cross-platform integration
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Zama** for FHE technology and FHEVM
 - **Rainbow** for wallet integration

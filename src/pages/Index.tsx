@@ -166,11 +166,13 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Badge variant="outline" className="border-green-200 text-green-800 bg-green-50">
-                <Shield className="w-3 h-3 mr-1" />
+              <Badge variant="outline" className="border-blue-200 text-blue-800 bg-blue-50">
+                <Building className="w-3 h-3 mr-1" />
                 FHE Encrypted
               </Badge>
-              <WalletConnection />
+              <div className="flex-shrink-0">
+                <WalletConnection />
+              </div>
             </div>
           </div>
         </div>
@@ -310,7 +312,7 @@ const Index = () => {
                       <div className="flex items-center space-x-2">
                         {tranche.isEncrypted && (
                           <Badge variant="outline" className="border-green-200 text-green-800 bg-green-50">
-                            <Shield className="w-3 h-3 mr-1" />
+                            <Building className="w-3 h-3 mr-1" />
                             Encrypted
                           </Badge>
                         )}
